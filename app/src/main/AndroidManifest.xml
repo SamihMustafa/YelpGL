@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.testing.yelpgl">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".businesslist.BusinessListActivity"
+            android:label="@string/title_business_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".businessdetail.BusinessDetailActivity"
+            android:label="@string/title_business_detail"
+            android:parentActivityName=".businesslist.BusinessListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.testing.yelpgl.businesslist.BusinessListActivity" />
+        </activity>
+    </application>
+
+</manifest>
