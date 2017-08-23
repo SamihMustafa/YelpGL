@@ -24,21 +24,18 @@ public class BusinessListActivity extends AppCompatActivity {
 
     private static final String TAG = BusinessListActivity.class.getSimpleName();
 
-    private BusinessListFragment bsListFragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityBusinessListBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_business_list);
 
+        BusinessListFragment bsListFragment;
         if(savedInstanceState == null) {
-            this.bsListFragment = new BusinessListFragment();
-            this.getFragmentManager().beginTransaction().add(binding.businessListFramelayout.getId(), this.bsListFragment, TAG).commit();
+            bsListFragment = new BusinessListFragment();
+            this.getFragmentManager().beginTransaction().add(binding.businessListFramelayout.getId(), bsListFragment, TAG).commit();
         } else {
-            this.bsListFragment = (BusinessListFragment) this.getFragmentManager().findFragmentByTag(TAG);
+            bsListFragment = (BusinessListFragment) this.getFragmentManager().findFragmentByTag(TAG);
         }
-
-
 
     }
 

@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import com.testing.yelpgl.R;
 import com.testing.yelpgl.businesslist.BusinessListActivity;
+import com.testing.yelpgl.model.BusinessDetail;
 
 /**
  * An activity representing a single Business detail screen. This
@@ -16,7 +17,7 @@ import com.testing.yelpgl.businesslist.BusinessListActivity;
  * item details are presented side-by-side with a list of items
  * in a {@link BusinessListActivity}.
  */
-public class BusinessDetailActivity extends AppCompatActivity {
+public class BusinessDetailActivity extends AppCompatActivity implements BusinessDetailContract.View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
