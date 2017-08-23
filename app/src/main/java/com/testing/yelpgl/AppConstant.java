@@ -6,6 +6,6 @@ package com.testing.yelpgl;
 
 public class AppConstant {
 
-    public static final String BASE_URL = "https://api.nal.usda.gov";
+    public static final String BASE_URL = "https://api.yelp.com/";
 
 }
