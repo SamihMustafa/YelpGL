@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.testing.yelpgl.R;
+import com.testing.yelpgl.model.Business;
+
+import java.util.List;
 
 /**
  * Created by Ali on 20-Aug-17.
@@ -14,27 +17,29 @@ import com.testing.yelpgl.R;
 
 public class BusinessAdapterList extends RecyclerView.Adapter<BusinessViewHolder> {
 
+    private final boolean twoPane;
+    public List<Business> businessList;
 
     public BusinessAdapterList(boolean mTwoPane) {
-
+        this.twoPane = mTwoPane;
     }
 
 
     @Override
     public BusinessViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.business_list_content, parent, false);
-        return new BusinessViewHolder(binding);
+        return new BusinessViewHolder(binding, twoPane);
     }
 
     @Override
     public void onBindViewHolder(BusinessViewHolder holder, int position) {
-
+        holder.bind(businessList.get(position));
     }
 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return businessList.size();
     }
 
   /*

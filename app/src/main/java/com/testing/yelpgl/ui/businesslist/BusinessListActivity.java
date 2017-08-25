@@ -29,10 +29,11 @@ public class BusinessListActivity extends AppCompatActivity {
         BusinessListFragment bsListFragment;
         if(savedInstanceState == null) {
             bsListFragment = new BusinessListFragment();
-            this.getFragmentManager().beginTransaction().add(binding.businessListFramelayout.getId(), bsListFragment, TAG).commit();
         } else {
             bsListFragment = (BusinessListFragment) this.getFragmentManager().findFragmentByTag(TAG);
         }
+
+        this.getFragmentManager().beginTransaction().add(binding.businessListFramelayout.getId(), bsListFragment, TAG).commit();
 
     }
 
