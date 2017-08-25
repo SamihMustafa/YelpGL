@@ -1,16 +1,13 @@
-package com.testing.yelpgl.businesslist;
+package com.testing.yelpgl.ui.businesslist;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import com.testing.yelpgl.R;
 
 import com.testing.yelpgl.databinding.ActivityBusinessListBinding;
-import com.testing.yelpgl.businessdetail.BusinessDetailActivity;
+import com.testing.yelpgl.ui.businessdetail.BusinessDetailActivity;
 
 /**
  * An activity representing a list of Businesses. This activity

@@ -10,7 +10,7 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.testing.yelpgl.businesslist.BusinessListActivity"
+    tools:context=".ui.businesslist.BusinessListActivity"
     tools:listitem="@layout/business_list_content" />
 
 </layout>

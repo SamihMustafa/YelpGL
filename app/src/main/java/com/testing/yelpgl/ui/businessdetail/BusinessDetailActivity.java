@@ -1,4 +1,4 @@
-package com.testing.yelpgl.businessdetail;
+package com.testing.yelpgl.ui.businessdetail;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 
 import com.testing.yelpgl.R;
-import com.testing.yelpgl.businesslist.BusinessListActivity;
-import com.testing.yelpgl.model.BusinessDetail;
+import com.testing.yelpgl.ui.businesslist.BusinessListActivity;
 
 /**
  * An activity representing a single Business detail screen. This

@@ -1,6 +1,6 @@
 package com.testing.yelpgl.dagger;
 
-import com.testing.yelpgl.AppConstant;
+import com.testing.yelpgl.util.AppConstant;
 import com.testing.yelpgl.network.WebService;
 
 import javax.inject.Named;
@@ -8,7 +8,6 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,10 +1,10 @@
-package com.testing.yelpgl.businesslist;
+package com.testing.yelpgl.ui.businessdetail;
 
 /**
  * Created by Ali on 20-Aug-17.
  */
 
-public interface BusinessListContract {
+public interface BusinessDetailContract {
 
     interface View {
 
@@ -15,3 +15,4 @@ public interface BusinessListContract {
     }
 
 }
+

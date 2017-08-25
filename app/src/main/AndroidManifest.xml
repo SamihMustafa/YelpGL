@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".YelpGlApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,17 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".businesslist.BusinessListActivity"
+            android:name=".ui.businesslist.BusinessListActivity"
             android:label="@string/title_business_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
-            android:name=".businessdetail.BusinessDetailActivity"
+            android:name=".ui.businessdetail.BusinessDetailActivity"
             android:label="@string/title_business_detail"
-            android:parentActivityName=".businesslist.BusinessListActivity"
+            android:parentActivityName=".ui.businesslist.BusinessListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.testing.yelpgl.businesslist.BusinessListActivity" />
+                android:value=".ui.businesslist.BusinessListActivity" />
         </activity>
     </application>
 

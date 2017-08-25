@@ -1,4 +1,4 @@
-package com.testing.yelpgl;
+package com.testing.yelpgl.util;
 
 /**
  * Created by Ali on 24-Aug-17.

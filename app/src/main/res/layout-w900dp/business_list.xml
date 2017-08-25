@@ -11,7 +11,7 @@
     android:divider="?android:attr/dividerHorizontal"
     android:orientation="horizontal"
     android:showDividers="middle"
-    tools:context="com.testing.yelpgl.businesslist.BusinessListActivity">
+    tools:context=".ui.businesslist.BusinessListActivity">
 
     <!--
     This layout is a two-pane layout for the Businesses
@@ -28,7 +28,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context="com.testing.yelpgl.businesslist.BusinessListActivity"
+        tools:context=".ui.businesslist.BusinessListActivity"
         tools:listitem="@layout/business_list_content" />
 
     <FrameLayout

@@ -1,4 +1,4 @@
-package com.testing.yelpgl.businesslist;
+package com.testing.yelpgl.ui.businesslist;
 
 import android.app.Fragment;
 import android.databinding.DataBindingUtil;
@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 
 import com.testing.yelpgl.R;
 import com.testing.yelpgl.databinding.FragmentBusinessListBinding;
+import com.testing.yelpgl.network.WebService;
+
+import javax.inject.Inject;
 
 /**
  * Created by Ali on 21-Aug-17.
@@ -28,6 +31,9 @@ public class BusinessListFragment extends Fragment implements BusinessListContra
      * device.
      */
     private boolean twoPane;
+
+    @Inject
+    WebService webService;
 
 
     @Nullable
@@ -54,6 +60,7 @@ public class BusinessListFragment extends Fragment implements BusinessListContra
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        BusinessListPresenter presenter = new BusinessListPresenter(webService);
 
     }
 

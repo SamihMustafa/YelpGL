@@ -1,4 +1,4 @@
-package com.testing.yelpgl.businessdetail;
+package com.testing.yelpgl.ui.businessdetail;
 
 import android.app.Activity;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.testing.yelpgl.R;
-import com.testing.yelpgl.businesslist.BusinessListActivity;
+import com.testing.yelpgl.ui.businesslist.BusinessListActivity;
 import com.testing.yelpgl.model.Business;
 
 /**

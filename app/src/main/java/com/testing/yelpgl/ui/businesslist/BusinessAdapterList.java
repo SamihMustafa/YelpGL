@@ -1,4 +1,4 @@
-package com.testing.yelpgl.businesslist;
+package com.testing.yelpgl.ui.businesslist;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
