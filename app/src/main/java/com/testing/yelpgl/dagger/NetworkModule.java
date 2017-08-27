@@ -1,5 +1,6 @@
 package com.testing.yelpgl.dagger;
 
+import com.apollographql.android.converter.pojo.ApolloConverterFactory;
 import com.testing.yelpgl.util.AppConstant;
 import com.testing.yelpgl.network.WebService;
 
@@ -41,10 +42,17 @@ public class NetworkModule {
 
     @Provides
     @Singleton
-    Retrofit provideRetrofit(GsonConverterFactory converter, RxJava2CallAdapterFactory callAdapter, @Named(NAME_BASE_URL) String baseUrl) {
+    ApolloConverterFactory provideApolloConverter() {
+        return new ApolloConverterFactory.Builder().build();
+    }
+
+    @Provides
+    @Singleton
+    Retrofit provideRetrofit(GsonConverterFactory converter, ApolloConverterFactory apollo, RxJava2CallAdapterFactory callAdapter, @Named(NAME_BASE_URL) String baseUrl) {
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(converter)
+                .addConverterFactory(apollo)
                 .addCallAdapterFactory(callAdapter)
                 .build();
     }

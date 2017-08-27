@@ -1,5 +1,7 @@
 package com.testing.yelpgl.dagger;
 
+import com.testing.yelpgl.network.WebService;
+
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -10,8 +12,8 @@ import dagger.Component;
 
 @Singleton
 @Component(modules = {NetworkModule.class})
-public interface AppComponent {
+public interface RetrofitComponent {
 
-
+    WebService provideWebService();
 
 }
