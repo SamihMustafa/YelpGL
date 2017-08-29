@@ -20,12 +20,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class NetworkModule {
 
-    private static final String NAME_BASE_URL = "NAME_BASE_URL";
+    private final String baseUrl;
 
-    @Provides
-    @Named(NAME_BASE_URL)
-    String provideBaseUrlString() {
-        return AppConstant.BASE_URL;
+    public NetworkModule(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     @Provides
@@ -48,7 +46,7 @@ public class NetworkModule {
 
     @Provides
     @Singleton
-    Retrofit provideRetrofit(GsonConverterFactory converter, ApolloConverterFactory apollo, RxJava2CallAdapterFactory callAdapter, @Named(NAME_BASE_URL) String baseUrl) {
+    Retrofit provideRetrofit(GsonConverterFactory converter, ApolloConverterFactory apollo, RxJava2CallAdapterFactory callAdapter) {
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(converter)

@@ -2,6 +2,8 @@ package com.testing.yelpgl.network.repository;
 
 import com.testing.yelpgl.network.WebService;
 
+import javax.inject.Inject;
+
 /**
  * Created by Ali on 23-Aug-17.
  */
@@ -9,6 +11,7 @@ import com.testing.yelpgl.network.WebService;
 public class YelpAuthRepository {
 
     private WebService webService;
+    private static final String OAUTH_GRANT = "client_credentials";
 
     public YelpAuthRepository(WebService service){
         webService = service;
@@ -17,8 +20,8 @@ public class YelpAuthRepository {
 
     public String getAuthToken(){
 
-        webService.getAutenticationTokenFromYelp();
-
+      //  webService.getAutenticationTokenFromYelp();
+        return "";
     }
 
 

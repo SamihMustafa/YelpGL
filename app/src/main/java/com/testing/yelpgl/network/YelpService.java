@@ -25,8 +25,9 @@ import retrofit2.http.POST;
 
 public class YelpService {
 
-    private static final String OAUTH_GRANT = "client_credentials";
     private Retrofit retrofit;
+
+    private static final String OAUTH_GRANT = "client_credentials";
 
     interface YelpAuthenticationService {
         @FormUrlEncoded

@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.testing.yelpgl.R;
 import com.testing.yelpgl.databinding.FragmentBusinessListBinding;
 import com.testing.yelpgl.network.WebService;
+import com.testing.yelpgl.ui.YelpApplication;
 
 import javax.inject.Inject;
 
@@ -40,6 +41,7 @@ public class BusinessListFragment extends Fragment implements BusinessListContra
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         FragmentBusinessListBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_business_list, container, false);
+        ((YelpApplication) getActivity().getApplication()).getNetComponent().inject(this);
 
         toolbar = binding.businessListToolbar;
         recyclerView = binding.businessListIncluded.businessListRecycler;
@@ -60,16 +62,13 @@ public class BusinessListFragment extends Fragment implements BusinessListContra
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
         BusinessListPresenter presenter = new BusinessListPresenter(webService);
 
     }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
-
-    }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView, boolean mTwoPane) {
         recyclerView.setAdapter(new BusinessAdapterList(mTwoPane));
